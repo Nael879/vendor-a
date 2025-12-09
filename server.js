@@ -8,7 +8,7 @@ const app = express();
 
 app.get("/api/data", async (req, res) => {
   try {
-    const q = "SELECT * FROM vendor_a.products ORDER BY id ASC";
+    const q = "SELECT * FROM vendor_a.warung ORDER BY id ASC";
     const { rows } = await pool.query(q);
     res.json(rows);
   } catch (e) {
